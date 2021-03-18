@@ -564,6 +564,9 @@
 
 			p {
 				margin: 0;
+				height: 108px;
+				text-overflow: ellipsis;
+				overflow: hidden;
 			}
 
 			.image {
