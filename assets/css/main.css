@@ -1799,6 +1799,9 @@ input, select, textarea {
 
 			.box.feature p {
 				margin: 0;
+				height: 108px;
+				text-overflow: ellipsis;
+				overflow: hidden;
 			}
 
 			.box.feature .image {
