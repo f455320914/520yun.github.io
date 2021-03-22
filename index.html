@@ -1,15 +1,13 @@
 <!DOCTYPE HTML>
-<!--
-	Verti by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 
 <head>
 	<title>Ze yu's blog</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
@@ -23,7 +21,7 @@
 				<!-- Logo -->
 				<div id="logo">
 					<h1><a href="index.html">yuyun</a></h1>
-					<span>A man of love</span>
+					<span class="love">A man of love</span>
 				</div>
 
 				<!-- Nav -->
@@ -54,13 +52,21 @@
 
 			</header>
 		</div>
+		<!-- swiper -->
+		<div class="swiper-container container swp">
+			<div class="swiper-wrapper col-4 col-12-medium">
+				<div class="swiper-slide"><img src="https://pic.macw.com/pic/202009/13084957_9d4c848d33.jpeg" alt=""></div>
+				<div class="swiper-slide"><img src="https://th.bing.com/th/id/R8a09b7a89f805906adf36155ad7d3a71?rik=Ywl7Yx5iOC5Ttg&riu=http%3a%2f%2fimg.mp.itc.cn%2fupload%2f20170704%2f71bc327ae0144827a0ceef9c07bd48de_th.jpg&ehk=nEwKmPNmPDzncEh7wjj9niQy9WKf0T41r4kfH%2fcuVBg%3d&risl=&pid=ImgRaw" alt=""></div>
+				<div class="swiper-slide"><img src="./images/xin.jpg" alt=""></div>
+			</div>
+		</div>
 
 		<!-- Banner -->
-		<div id="banner-wrapper">
+		<!-- <div id="banner-wrapper">
 			<div id="banner" class="box container">
 				<div class="row">
 					<div class="col-7 col-12-medium">
-						<h2>Hi. This is blog.</h2>
+						<h2>Dia duit, is é seo mo láithreán gréasáin</h2>
 						<p>Here will record my life, including learning, life perception and so on.</p>
 					</div>
 					<div class="col-5 col-12-medium">
@@ -71,7 +77,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- Features -->
 		<div id="features-wrapper">
@@ -81,13 +87,14 @@
 
 						<!-- Box -->
 						<section class="box feature">
-							<a href="#" class="image featured"><img src="images/Koenigsegg.jpg" alt="" /></a>
+							<a href="https://www.koenigsegg.com/" class="image featured"><img src="images/Koenigsegg3.jpeg" alt="" /></a>
 							<div class="inner">
 								<header>
 									<h2>Koenigsegg</h2>
 									<p>Ghost sports car</p>
 								</header>
-								<p>Koenigsegg一词是“刀锋”的意思，在国内曾被翻译为“柯尼赛格”，是瑞典一家汽车公司。它的标志是瑞典皇空军的标志，为一幽灵图！所以有“幽灵跑车”之称。1994年，瑞典一群有汽车工业经验和专业知识的优秀设计师和工程师，以克瑞汀·凡·科尼塞格的名字，在瑞典南部安吉荷姆附近成立了这家汽车厂。</p>
+								<p>Koenigsegg一词是“刀锋”的意思，在国内曾被翻译为“柯尼赛格”，是瑞典一家汽车公司。它的标志是瑞典皇空军的标志，为一幽灵图！所以有“幽灵跑车”之称。1994年，瑞典一群有汽车工业经验和专业知识的优秀设计师和工程师，以克瑞汀·凡·科尼塞格的名字，在瑞典南部安吉荷姆附近成立了这家汽车厂。
+								</p>
 							</div>
 						</section>
 
@@ -96,13 +103,13 @@
 
 						<!-- Box -->
 						<section class="box feature">
-							<a href="#" class="image featured"><img src="images/love.jpeg" alt="" /></a>
+							<a href="https://www.spacex.com/" class="image featured"><img src="https://images.pexels.com/photos/23793/rocket-launch-space-discovery.jpg?cs=srgb&dl=pexels-spacex-23793.jpg&fm=jpg" alt="" /></a>
 							<div class="inner">
 								<header>
-									<h2>Scarlett Johansson</h2>
-									<p>斯嘉丽·约翰逊</p>
+									<h2>spacex</h2>
+									<p>Elon Musk</p>
 								</header>
-								<p>1984年11月22日出生于美国纽约，美国女演员、歌手。</p>
+								<p>埃隆·马斯克（Elon Musk）2002年6月建立的美国太空运输公司。它开发了可部分重复使用的猎鹰1号和猎鹰9号运载火箭。SpaceX同时开发Dragon系列的航天器以通过猎鹰9号发射到轨道。SpaceX主要设计、测试和制造内部的部件，如Merlin、Kestrel和Draco火箭发动机。</p>
 							</div>
 						</section>
 
@@ -111,13 +118,15 @@
 
 						<!-- Box -->
 						<section class="box feature">
-							<a href="#" class="image featured"><img src="images/baibian.jpg" alt="" /></a>
+							<a href="baibian.html" class="image featured"><img src="images/baibian_title.jpg"
+									alt="" /></a>
 							<div class="inner">
 								<header>
 									<h2>百辩经济学</h2>
 									<p>Defending the Undefendable</p>
 								</header>
-								<p>瓦特•布拉克，奥地利学派经济学家，自由市场经济理论的倡导者和践行者。获得美国哥伦比亚大学经济学博士学位，目前任教于美国新奥尔良的洛约拉大学商学院。《百辩经济学》是他最知名的著作，被视为自由市场经济领域最经典的书籍之一。</p>
+								<p>瓦特•布拉克，奥地利学派经济学家，自由市场经济理论的倡导者和践行者。获得美国哥伦比亚大学经济学博士学位，目前任教于美国新奥尔良的洛约拉大学商学院。《百辩经济学》是他最知名的著作，被视为自由市场经济领域最经典的书籍之一。
+								</p>
 							</div>
 						</section>
 
@@ -138,17 +147,17 @@
 								<h3>Interesting stuff</h3>
 								<div class="grid">
 									<div class="row gtr-50">
-										<div class="col-6"><a href="#" class="image fit"><img src="images/pic04.jpg"
-													alt="" /></a></div>
-										<div class="col-6"><a href="#" class="image fit"><img src="images/pic05.jpg"
-													alt="" /></a></div>
-										<div class="col-6"><a href="#" class="image fit"><img src="images/pic06.jpg"
-													alt="" /></a></div>
-										<div class="col-6"><a href="#" class="image fit"><img src="images/pic07.jpg"
-													alt="" /></a></div>
+										<div class="col-6"><a href="https://www.bilibili.com/video/BV1ka4y1J76u" class="image fit"><img src="https://i1.hdslb.com/bfs/archive/9089a9b7f228f3be15ee3a7085f197c53918ced8.png@380w_240h_100Q_1c.webp"
+													alt="当你迷茫的时候，请点开这个视频!" /></a></div>
+										<div class="col-6"><a href="https://www.bilibili.com/video/BV1X54y1B774" class="image fit"><img src="https://i0.hdslb.com/bfs/archive/1829a8928312b95b834058b81ff32aa2b692a61a.jpg@380w_240h_100Q_1c.webp"
+													alt="《火力少年王》删减版" /></a></div>
+										<div class="col-6"><a href="https://www.bilibili.com/video/BV1Kk4y1C7zA" class="image fit"><img src="https://i0.hdslb.com/bfs/archive/1078c4f2ad76132e3108251354611580c701748c.jpg@380w_240h_100Q_1c.webp"
+													alt="史上最骚解说：在CCTV5看倚天屠龙记是什么体验？（二）" /></a></div>
+										<div class="col-6"><a href="https://www.bilibili.com/video/BV1SV411a77b" class="image fit"><img src="https://i2.hdslb.com/bfs/archive/c7594f26fff84af2617b97396e2169da88712e94.jpg@380w_240h_100Q_1c.webp"
+													alt="【英文直译.系列】周华健《难念的经》～我知道你们都点了快一个多月了…我已阵亡！我还加了和声…保佑我吧！" /></a></div>
 									</div>
 								</div>
-								<a href="#" class="button icon fa-file-alt">More</a>
+								<a href="https://space.bilibili.com/196204956/favlist" class="button icon fa-file-alt">More</a>
 							</section>
 						</div>
 
@@ -159,16 +168,12 @@
 						<div id="content">
 							<section class="last">
 								<h2>So what's this all about?</h2>
-								<p>This is <strong>Verti</strong>, a free and fully responsive HTML5 site template by <a
-										href="http://html5up.net">HTML5 UP</a>.
-									Verti is released under the <a href="http://html5up.net/license">Creative Commons
-										Attribution license</a>, so feel free to use it for any personal or commercial
-									project you might have going on (just don't forget to credit us for the design!)</p>
-								<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent
-									semper bibendum ipsum, et tristique augue fringilla eu. Vivamus id risus vel dolor
-									auctor euismod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. Aliquam
-									luctus mattis lectus sit amet phasellus quam turpis.</p>
-								<a href="#" class="button icon solid fa-arrow-circle-right">Continue Reading</a>
+								<h3 class="introduced
+								">This site uses jQuery, HTML5, CSS3 and other technologies.</h3>
+								<h3 class="introduced
+								">Here will record my life, including learning, life perception and so on.</h3>
+								<a href="#" class="button icon solid fa-arrow-circle-right">Great stay tuned
+								</a>
 							</section>
 						</div>
 
@@ -265,15 +270,20 @@
 
 	</div>
 
-	<!-- Scripts -->
-
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.dropotron.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
 </body>
-
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.js"> </script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
+<script src="assets/js/main.js"></script>
+<script>
+	var mySwiper = new Swiper('.swiper-container', {
+		// direction: ' ', // 垂直切换选项
+		loop: true, // 循环模式选项
+	})
+</script>
 </html>
