@@ -1,5 +1,6 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Oleo+Script:400|Open+Sans:300,300italic,600,600italic,800");
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -107,7 +108,7 @@ input, select, textarea {
 
 a {
 	color: #0090c5;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 a:hover {
@@ -196,9 +197,55 @@ p, ul, ol, dl, table {
 .swp {
 	width: 100%;
 }
-#banner-wrapper{
+
+#banner-wrapper {
 	margin-top: 4em;
 }
+
+article>a p{
+	margin: auto;
+	margin-left: 1rem;
+	position: relative;
+    font-size: 1.75rem;
+    word-spacing: 0.2em;
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    color: transparent;
+    background-color: #5f66b7;
+    background-clip: text;
+	-webkit-background-clip: text;
+}
+
+article>a p:hover:after {
+	content: attr(data-text);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+	background-image: linear-gradient(120deg, transparent 0%, transparent 6rem, white 11rem, transparent 11.15rem, transparent 15rem, rgba(255, 255, 255, 0.3) 20rem, transparent 25rem, transparent 27rem, rgba(255, 255, 255, 0.6) 32rem, white 33rem, rgba(255, 255, 255, 0.3) 33.15rem, transparent 38rem, transparent 40rem, rgba(255, 255, 255, 0.3) 45rem, transparent 50rem, transparent 100%);
+	background-size: 150% 100%;
+	background-repeat: no-repeat;
+	animation: shine 5s infinite linear;
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+@keyframes shine {
+	0% {
+		background-position: 50% 0;
+	}
+	100% {
+		background-position: -190% 0;
+	}
+}
+
+article>h3 {
+	margin-top: 1em;
+}
+
 @media screen and (max-width: 1680px) {
 	.container {
 		width: 1200px;
@@ -1386,8 +1433,8 @@ input[type="button"], input[type="submit"], input[type="reset"], button, .button
 	-webkit-appearance: none;
 	position: relative;
 	display: inline-block;
-	background: #0090c5;
-	color: #fff;
+	background: #3a3842;
+	color: #5f66b7;
 	text-decoration: none;
 	border-radius: 6px;
 	font-weight: 800;
@@ -1396,6 +1443,7 @@ input[type="button"], input[type="submit"], input[type="reset"], button, .button
 	cursor: pointer;
 	font-size: 1.35em;
 	padding: 0.6em 1.5em;
+	box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2), -10px -10px 20px 5px rgba(77, 71, 100, 0.4), -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
 }
 
 input[type="button"].icon:before, input[type="submit"].icon:before, input[type="reset"].icon:before, button.icon:before, .button.icon:before {
@@ -1405,11 +1453,12 @@ input[type="button"].icon:before, input[type="submit"].icon:before, input[type="
 }
 
 input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover, button:hover, .button:hover {
-	background: #10a0d5;
+	background: hsl(250, 10%, 25%);
 }
 
 input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active, button:active, .button:active {
-	background: #20b0e5;
+	box-shadow: 5px 5px 10px 2.5px rgba(0, 0, 0, 0.2), -5px -5px 10px 2.5px rgba(77, 71, 100, 0.3), -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
+	background: #3a3842;
 }
 
 input[type="button"].alt, input[type="submit"].alt, input[type="reset"].alt, button.alt, .button.alt {
@@ -1511,6 +1560,25 @@ ul.menu li:first-child {
 
 .box.feature {
 	padding: 0;
+	--color-gradient-start: rgba(0, 0, 0, 0.15);
+	--color-gradient-stop: rgba(255, 255, 255, 1);
+	--color-outset-start: rgba(0, 0, 0, 0.15);
+	--color-outset-stop: rgba(255, 255, 255, 1);
+	--color-inset-start: rgba(0, 0, 0, 0);
+	--color-inset-stop: rgba(0, 0, 0, 0);
+	background: #f2f2f2;
+	background: linear-gradient(145deg, var(--color-gradient-start), var(--color-gradient-stop));
+	box-shadow: .6em .6em .8em var(--color-outset-start), -.6em -.6em .8em var(--color-outset-stop), inset .3em .3em .4em var(--color-inset-start), inset -.3em -.3em .4em var(--color-inset-stop);
+	transition: --color-gradient-stop .4s, --color-gradient-start .4s, --color-outset-start .8s, --color-outset-stop .8s, --color-inset-start .8s, --color-inset-stop .8s, color 1s;
+}
+
+.box.feature:hover {
+	--color-gradient-start: rgba(0, 0, 0, 0.15);
+	--color-gradient-stop: rgba(255, 255, 255, 1);
+	--color-outset-start: rgba(0, 0, 0, 0);
+	--color-outset-stop: rgba(0, 0, 0, 0);
+	--color-inset-start: rgba(0, 0, 0, 0.15);
+	--color-inset-stop: rgba(255, 255, 255, 1);
 }
 
 .box.feature .inner {
@@ -1588,6 +1656,14 @@ ul.menu li:first-child {
 	margin: 0 0 3em 0;
 }
 
+.grid .col-6 a {
+	box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.2), -10px -10px 20px 5px rgba(77, 71, 100, 0.4), -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
+}
+
+.grid .col-6 a:active {
+	box-shadow: 5px 5px 10px 2.5px rgba(0, 0, 0, 0.2), -5px -5px 10px 2.5px rgba(77, 71, 100, 0.3), -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
+}
+
 .widget.thumbnails .image {
 	margin: 0;
 }
@@ -1650,7 +1726,7 @@ ul.menu li:first-child {
 }
 
 #main-wrapper {
-	background: #fff;
+	background: #3a3842;
 	box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
 	padding: 5em 0 5em 0;
 }
@@ -1675,12 +1751,6 @@ ul.menu li:first-child {
 }
 
 #logo h1 {
-	--color-gradient-start: rgba(0, 0, 0, 0.15);
-	--color-gradient-stop: rgba(255, 255, 255, 1);
-	--color-outset-start: rgba(0, 0, 0, 0.15);
-	--color-outset-stop: rgba(255, 255, 255, 1);
-	--color-inset-start: rgba(0, 0, 0, 0);
-	--color-inset-stop: rgba(0, 0, 0, 0);
 	font-size: 3rem;
 	font-family: 'Oleo Script', serif;
 	color: #44C0FA;
@@ -1692,8 +1762,15 @@ ul.menu li:first-child {
 	outline: 0;
 	padding: .25em .5em .45em;
 	border-radius: .3em;
-	background: #f2f2f2;
-	background: linear-gradient(145deg, var(--color-gradient-start), var(--color-gradient-stop));
+	--color-gradient-start: rgba(163, 177, 198, 0.1);
+	--color-gradient-center: rgba(163, 177, 198, 0.25);
+	--color-gradient-stop: rgba(255, 255, 255, 1);
+	--color-outset-start: rgba(163, 177, 198, 0.6);
+	--color-outset-stop: rgba(255, 255, 255, 0.5);
+	--color-inset-start: rgba(136, 165, 191, 0.48);
+	--color-inset-stop: rgba(0, 0, 0, 0);
+	background: rgba(255, 255, 255, 1);
+	background: linear-gradient(318.32deg, var(--color-gradient-start) 0%, var(--color-gradient-start) 55%, var(--color-gradient-center) 100%);
 	box-shadow: .4em .4em .8em var(--color-outset-start), -.4em -.4em .8em var(--color-outset-stop), inset .2em .2em .4em var(--color-inset-start), inset -.2em -.2em .4em var(--color-inset-stop);
 	transition: --color-gradient-stop .4s, --color-gradient-start .4s, --color-outset-start .8s, --color-outset-stop .8s, --color-inset-start .8s, --color-inset-stop .8s, color 1s;
 }
@@ -1773,7 +1850,7 @@ ul.menu li:first-child {
 	padding: 0.5em 1em 0.5em 1em;
 }
 
-#nav ul li:not(.current) a:hover, #nav ul li:not(.current) span:hover{
+#nav ul li:not(.current) a:hover, #nav ul li:not(.current) span:hover {
 	--color-gradient-start: rgba(0, 0, 0, 0.15);
 	--color-gradient-stop: rgba(255, 255, 255, 1);
 	--color-outset-start: rgba(0, 0, 0, 0);
@@ -1830,7 +1907,7 @@ h3 {
 }
 
 .introduced {
-	background: #242A63 -webkit-linear-gradient(left, #69742E, #2E8062 50%, #802261 90%, #734D28) no-repeat 0 0;
+	background: #7781E6 -webkit-linear-gradient(left, #69CFAC, #C0C995 50%, #C49362 90%, #CF69AB) no-repeat 0 0;
 	background-size: 20% 100%;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -1988,6 +2065,26 @@ h3 {
 #banner {
 	position: relative;
 	padding: 4.5em;
+	border-radius: .4em;
+	--color-gradient-start: rgba(0, 0, 0, 0.15);
+	--color-gradient-stop: rgba(255, 255, 255, 1);
+	--color-outset-start: rgba(0, 0, 0, 0.15);
+	--color-outset-stop: rgba(255, 255, 255, 1);
+	--color-inset-start: rgba(0, 0, 0, 0);
+	--color-inset-stop: rgba(0, 0, 0, 0);
+	background: #f2f2f2;
+	background: linear-gradient(145deg, var(--color-gradient-start), var(--color-gradient-stop));
+	box-shadow: .6em .6em .8em var(--color-outset-start), -.6em -.6em .8em var(--color-outset-stop), inset .3em .3em .4em var(--color-inset-start), inset -.3em -.3em .4em var(--color-inset-stop);
+	transition: --color-gradient-stop .4s, --color-gradient-start .4s, --color-outset-start .8s, --color-outset-stop .8s, --color-inset-start .8s, --color-inset-stop .8s, color 1s;
+}
+
+#banner:hover {
+	--color-gradient-start: rgba(0, 0, 0, 0.15);
+	--color-gradient-stop: rgba(255, 255, 255, 1);
+	--color-outset-start: rgba(0, 0, 0, 0);
+	--color-outset-stop: rgba(0, 0, 0, 0);
+	--color-inset-start: rgba(0, 0, 0, 0.15);
+	--color-inset-stop: rgba(255, 255, 255, 1);
 }
 
 #banner h2 {
@@ -2414,7 +2511,6 @@ h3 {
 	}
 	#banner-wrapper {
 		padding: 0 15px 0 15px;
-
 	}
 	#features-wrapper {
 		padding: 0 15px 40px 15px;
