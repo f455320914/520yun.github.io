@@ -111,10 +111,6 @@ a {
 	text-decoration: none;
 }
 
-a:hover {
-	text-decoration: none;
-}
-
 h1, h2, h3, h4, h5, h6 {
 	color: #444;
 	font-weight: 800;
@@ -202,18 +198,18 @@ p, ul, ol, dl, table {
 	margin-top: 4em;
 }
 
-article>a p{
+article>a p {
 	margin: auto;
 	margin-left: 1rem;
 	position: relative;
-    font-size: 1.75rem;
-    word-spacing: 0.2em;
-    display: inline-block;
-    line-height: 1;
-    white-space: nowrap;
-    color: transparent;
-    background-color: #5f66b7;
-    background-clip: text;
+	font-size: 1.75rem;
+	word-spacing: 0.2em;
+	display: inline-block;
+	line-height: 1;
+	/* white-space: nowrap; */
+	color: transparent;
+	background-color: #5f66b7;
+	background-clip: text;
 	-webkit-background-clip: text;
 }
 
@@ -477,7 +473,7 @@ article>h3 {
 }
 
 .row {
-	margin-top: -40px;
+	margin-top: 0;
 	margin-left: -40px;
 }
 
@@ -673,7 +669,7 @@ article>h3 {
 		padding-top: 20px;
 	}
 	.row {
-		margin-top: -40px;
+		margin-top: -10px;
 		margin-left: -40px;
 	}
 	.row>* {
@@ -859,8 +855,8 @@ article>h3 {
 		padding-top: 12.5px;
 	}
 	.row {
-		margin-top: -25px;
-		margin-left: -25px;
+		margin-top: -5px;
+		margin-left: -5px;
 	}
 	.row>* {
 		padding: 25px 0 0 25px;
@@ -1500,6 +1496,25 @@ ul.style2 {
 
 ul.style2 li {
 	padding-left: 0;
+}
+
+ul.style2 li:hover {
+	-webkit-mask: radial-gradient(circle at 15% 0%, #000, transparent 40%);
+	-webkit-mask-size: 100%;
+	mask: radial-gradient(circle at 50% 0%, #000, transparent 30%);
+	mask-size: 100%;
+	font-weight: bold;
+	animation: scale 4s infinite;
+	
+}
+
+@keyframes scale {
+	0% {
+		-webkit-mask-size: 100% 100%;
+	}
+	60%, 100% {
+		-webkit-mask-size: 150% 800%;
+	}
 }
 
 ol {
