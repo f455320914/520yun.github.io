@@ -229,7 +229,9 @@ article>a p:hover:after {
 	-webkit-background-clip: text;
 	background-clip: text;
 }
-
+article>img{
+	width: 100%;
+}
 @keyframes shine {
 	0% {
 		background-position: 50% 0;
@@ -1783,7 +1785,7 @@ canvas {
 }
 
 #img-container canvas {
-	margin-top: -10%;
+	margin-top: -5%;
 	margin-left: -20%;
 }
 
