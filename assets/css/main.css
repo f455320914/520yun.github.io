@@ -16,6 +16,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
 	line-height: 1;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 ol, ul {
@@ -272,6 +273,12 @@ article>h3 {
 }
 
 @media screen and (max-width: 736px) {
+	#logo {
+		margin-left: 1em;
+	}
+	#banner-wrapper {
+		margin-top: 1em;
+	}
 	.container {
 		width: 100%;
 	}
@@ -1419,6 +1426,11 @@ table thead {
 	width: auto;
 }
 
+button:focus, button:active:focus, button.active:focus, button.focus, button:active.focus, button.active.focus {
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 /* Button */
 
 input[type="button"], input[type="submit"], input[type="reset"], button, .button {
@@ -1505,7 +1517,6 @@ ul.style2 li:hover {
 	mask-size: 100%;
 	font-weight: bold;
 	animation: scale 4s infinite;
-	
 }
 
 @keyframes scale {
@@ -1744,6 +1755,36 @@ ul.menu li:first-child {
 	background: #3a3842;
 	box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
 	padding: 5em 0 5em 0;
+	position: relative;
+	z-index: 1;
+}
+
+#main-wrapper #content {
+	position: relative;
+	z-index: 2;
+	background: #3a3842;
+}
+
+#main-wrapper>canvas {
+	display: block;
+	vertical-align: bottom;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+}
+
+canvas {
+	height: 100%;
+	width: 100%;
+}
+
+#img-container {
+	width: 100%;
+}
+
+#img-container canvas {
+	margin-top: -10%;
+	margin-left: -20%;
 }
 
 #footer-wrapper {
@@ -2168,6 +2209,13 @@ h3 {
 	}
 }
 
+@media screen and (max-width: 1415px) {
+	#img-container canvas {
+		margin-top: -6%;
+		margin-left: -7%;
+	}
+}
+
 /* Large */
 
 @media screen and (max-width: 1280px) {
@@ -2175,8 +2223,24 @@ h3 {
 	body, input, select, textarea {
 		font-size: 11pt;
 	}
+	#img-container canvas {
+		margin-top: -7%;
+		margin-left: -15%;
+	}
 }
 
+@media screen and (max-width: 1150px) {
+	#img-container canvas {
+		margin-top: -7%;
+		margin-left: -5%;
+	}
+}
+@media screen and (max-width: 1050px) {
+	#img-container canvas {
+		margin-top: -7%;
+		margin-left: -3%;
+	}
+}
 /* Medium */
 
 #navPanel, #navToggle {
@@ -2428,6 +2492,10 @@ h3 {
 		-ms-transform: translateX(0);
 		transform: translateX(0);
 	}
+	#img-container canvas {
+		margin-top: -8%;
+		margin-left: -6%;
+	}
 }
 
 /* Small */
@@ -2574,5 +2642,9 @@ h3 {
 	}
 	#copyright {
 		text-align: left;
+	}
+	#img-container canvas {
+		margin-top: -18%;
+		margin-left: -8%;
 	}
 }
